@@ -1,0 +1,57 @@
+@import "./variables";
+
+@mixin primary-btn {
+  width: 138px;
+  height: 53px;
+  border-radius: 999px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  @include text-preset-3;
+  color: white;
+  background-color: $red;
+  border: none;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    background-color: darken($red, 10%);
+  }
+}
+
+@mixin addToCart-btn {
+  width: 160px;
+  height: 44px;
+  border-radius: 999px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid $rose-400;
+  @include text-preset-4-bold;
+  color: $rose-900;
+  background-color: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    border: 1px solid $red;
+    color: $red;
+  }
+}
+
+@mixin addToCart-btn-active {
+  width: 160px;
+  height: 44px;
+  border-radius: 999px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $red;
+  @include text-preset-4-bold;
+  color: white;
+  background-color: $red;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}

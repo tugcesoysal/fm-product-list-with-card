@@ -1,0 +1,44 @@
+$red: hsl(14, 86%, 42%);
+$green: hsl(159, 69%, 38%);
+
+$rose-50: hsl(20, 50%, 98%);
+$rose-100: hsl(13, 31%, 94%);
+$rose-300: hsl(14, 25%, 72%);
+$rose-400: hsl(7, 20%, 60%);
+$rose-500: hsl(12, 20%, 44%);
+$rose-900: hsl(14, 65%, 9%);
+
+@mixin text-preset-1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0px;
+}
+
+@mixin text-preset-2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 0px;
+}
+
+@mixin text-preset-3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+@mixin text-preset-4 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+@mixin text-preset-4-bold {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0px;
+}

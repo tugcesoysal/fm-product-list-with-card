@@ -1,0 +1,82 @@
+@import "./variables";
+@import "./designSystem";
+
+.product-card {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.active-card {
+  border: 2px solid $red;
+}
+
+.product-card__image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .product-card__img {
+    border-radius: 8px;
+  }
+
+  .atc-btn-active {
+    @include addToCart-btn-active;
+    margin-top: -22px;
+
+    .increment-icon,
+    .decrement-icon {
+      width: 20px;
+      height: 20px;
+      border: 1px solid white;
+      border-radius: 50%;
+      padding: 5px;
+    }
+  }
+
+  .atc-btn {
+    @include addToCart-btn;
+    margin-top: -22px;
+  }
+
+  .atc-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.product-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .category {
+    @include text-preset-4;
+    color: $rose-500;
+  }
+
+  .name {
+    @include text-preset-3;
+    color: $rose-900;
+  }
+
+  .price {
+    @include text-preset-3;
+    color: $red;
+  }
+}
+
+@media (max-width: 1000px) {
+  .product-card {
+    max-width: 213px;
+  }
+}
+
+@media (max-width: 500px) {
+  .product-card {
+    max-width: 100%;
+  }
+}

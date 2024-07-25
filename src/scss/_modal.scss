@@ -1,0 +1,79 @@
+@import "./variables";
+@import "./designSystem";
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 592px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.confirm-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.modal__header {
+  @include text-preset-1;
+  color: $rose-900;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.modal__parag {
+  font-size: 16px;
+  font-weight: 400;
+  color: $rose-500;
+}
+
+.modal__shopping-cart {
+  width: 100%;
+  margin: 32px 0;
+  background-color: $rose-50;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .cart__product-info {
+    margin-left: 16px;
+  }
+
+  .cart__product-totalPrice {
+    margin-left: auto;
+    @include text-preset-3;
+  }
+
+  .modal__thumbnail {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.newOrder-btn {
+  @include primary-btn;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .modal {
+    max-width: 688px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal {
+    width: 100%;
+    padding: 24px;
+  }
+}

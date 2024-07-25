@@ -1,0 +1,150 @@
+@import "./variables";
+@import "./designSystem";
+
+.shopping-cart {
+  width: 384px;
+  min-width: 384px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.shopping-cart__header {
+  @include text-preset-2;
+  color: $red;
+}
+
+.shopping-cart__cart {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  .empty-img {
+    width: 128px;
+    height: 128px;
+  }
+
+  p {
+    @include text-preset-4-bold;
+    color: $rose-500;
+  }
+}
+
+.cart__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart__product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $rose-100;
+
+  &:last-of-type {
+    padding-bottom: 24px;
+  }
+}
+
+.cart__product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .cart__product-name {
+    @include text-preset-4-bold;
+    color: $rose-900;
+  }
+}
+
+.cart__product-details {
+  display: flex;
+  gap: 8px;
+
+  .cart__product-count {
+    @include text-preset-4-bold;
+    color: $red;
+  }
+
+  .cart__product-price {
+    @include text-preset-4;
+    color: $rose-500;
+  }
+
+  .cart__product-totalPrice {
+    @include text-preset-4-bold;
+    color: $rose-500;
+  }
+}
+
+.remove-icon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid $rose-400;
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.cart__order-total {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .total {
+    @include text-preset-4;
+    color: $rose-900;
+  }
+
+  .price {
+    @include text-preset-2;
+    color: $rose-900;
+  }
+}
+
+.cart__delivery-info {
+  width: 100%;
+  background-color: $rose-50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 8px;
+
+  .carbon-neutral-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .delivery-info {
+    @include text-preset-4;
+    color: $rose-900;
+
+    span {
+      @include text-preset-4-bold;
+    }
+  }
+}
+
+.cart__confirm-btn {
+  @include primary-btn;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .shopping-cart {
+    width: 100%;
+    min-width: 100%;
+  }
+}
